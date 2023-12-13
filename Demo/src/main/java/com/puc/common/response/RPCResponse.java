@@ -22,7 +22,7 @@ public class RPCResponse implements Serializable {
         return RPCResponse.builder().code(200).data(data).build();
     }
 
-    public static RPCResponse fail(Object data){
+    public static RPCResponse fail(){
         return RPCResponse.builder().code(500).message("服务器发生错误").build();
     }
 

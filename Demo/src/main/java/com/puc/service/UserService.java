@@ -1,6 +1,6 @@
 package com.puc.service;
 
-import com.puc.user.User;
+import com.puc.pojo.user.User;
 
 public interface UserService {
 
