@@ -1,14 +1,9 @@
 package com.puc.client;
-
+import com.puc.pojo.blog.Blog;
 import com.puc.proxy.ClientProxy;
+import com.puc.service.BlogService;
 import com.puc.service.UserService;
-import com.puc.user.User;
-
-import java.io.IOException;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
-import java.net.Socket;
-import java.util.Random;
+import com.puc.pojo.user.User;
 
 public class RPCClient {
     public static void main(String[] args) {
@@ -23,5 +18,9 @@ public class RPCClient {
         User user = User.builder().userName("张三").id(100).sex(true).build();
         Integer integer = proxy.insertUserId(user);
         System.out.println("向服务端插入数据："+integer);
+
+        BlogService blogService = clientProxy.getProxy(BlogService.class);
+        Blog blogById = blogService.getBlogById(10000);
+        System.out.println("从服务端得到的blog为：" + blogById);
     }
 }
