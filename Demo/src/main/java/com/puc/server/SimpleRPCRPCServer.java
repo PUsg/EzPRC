@@ -1,13 +1,9 @@
-package com.puc.server.impl;
+package com.puc.server;
 
-import com.puc.server.RPCServer;
-import com.puc.service.provider.ServiceProvider;
-import com.puc.thread.WorkThread;
-import jdk.nashorn.internal.runtime.regexp.joni.ast.StringNode;
+import com.puc.service.ServiceProvider;
 
 import java.net.ServerSocket;
 import java.net.Socket;
-import java.util.Map;
 
 public class SimpleRPCRPCServer implements RPCServer {
 

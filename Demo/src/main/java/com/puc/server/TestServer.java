@@ -1,15 +1,10 @@
 package com.puc.server;
 
-import com.puc.server.impl.SimpleRPCRPCServer;
-import com.puc.server.impl.ThreadPoolRPCRPCServer;
 import com.puc.service.BlogService;
 import com.puc.service.UserService;
 import com.puc.service.impl.BlogServiceImpl;
 import com.puc.service.impl.UserServiceImpl;
-import com.puc.service.provider.ServiceProvider;
-
-import java.util.HashMap;
-import java.util.Map;
+import com.puc.service.ServiceProvider;
 
 public class TestServer {
 
@@ -21,7 +16,7 @@ public class TestServer {
         serviceProvider.provideServiceInterface(userService);
         serviceProvider.provideServiceInterface(blogService);
 
-        RPCServer RPCServer = new ThreadPoolRPCRPCServer(serviceProvider);
+        RPCServer RPCServer = new NettyRPCServer(serviceProvider);
         RPCServer.start(8899);
     }
 }

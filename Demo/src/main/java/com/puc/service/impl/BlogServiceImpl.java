@@ -1,6 +1,6 @@
 package com.puc.service.impl;
 
-import com.puc.pojo.blog.Blog;
+import com.puc.common.Blog;
 import com.puc.service.BlogService;
 
 public class BlogServiceImpl implements BlogService {

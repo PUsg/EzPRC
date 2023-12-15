@@ -1,6 +1,6 @@
 package com.puc.service;
 
-import com.puc.pojo.blog.Blog;
+import com.puc.common.Blog;
 
 public interface BlogService {
 

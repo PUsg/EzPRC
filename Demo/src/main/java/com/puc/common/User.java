@@ -1,4 +1,4 @@
-package com.puc.pojo.user;
+package com.puc.common;
 
 
 import lombok.AllArgsConstructor;

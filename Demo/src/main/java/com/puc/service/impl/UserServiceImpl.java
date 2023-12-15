@@ -1,7 +1,7 @@
 package com.puc.service.impl;
 
 import com.puc.service.UserService;
-import com.puc.pojo.user.User;
+import com.puc.common.User;
 
 
 import java.util.Random;

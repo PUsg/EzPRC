@@ -1,4 +1,4 @@
-package com.puc.service.provider;
+package com.puc.service;
 
 
 import java.util.HashMap;

@@ -1,19 +1,15 @@
-package com.puc.thread;
+package com.puc.server;
 
 
 import com.puc.common.request.RPCRequest;
 import com.puc.common.response.RPCResponse;
-import com.puc.service.provider.ServiceProvider;
+import com.puc.service.ServiceProvider;
 import lombok.AllArgsConstructor;
 
-import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
-import java.io.OutputStream;
-import java.lang.reflect.Member;
 import java.lang.reflect.Method;
 import java.net.Socket;
-import java.util.Map;
 
 @AllArgsConstructor
 public class WorkThread implements Runnable{
