@@ -17,6 +17,8 @@ public class RPCResponse implements Serializable {
     // 具体数据
     private Object data;
 
+    private Class<?> dataType;
+
 
     public static RPCResponse success(Object data) {
         return RPCResponse.builder().code(200).data(data).build();
