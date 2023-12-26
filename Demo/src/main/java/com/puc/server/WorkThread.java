@@ -28,6 +28,7 @@ public class WorkThread implements Runnable{
             oos.flush();
         } catch (Exception e) {
             e.printStackTrace();
+            System.out.println("从IO中读取数据错误");
         }
     }
 
@@ -44,6 +45,7 @@ public class WorkThread implements Runnable{
             return RPCResponse.success(invoke);
         } catch (Exception e) {
             e.printStackTrace();
+            System.out.println("方法执行错误");
             return RPCResponse.fail();
         }
 
